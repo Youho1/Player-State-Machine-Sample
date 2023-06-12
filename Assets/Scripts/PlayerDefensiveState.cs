@@ -21,7 +21,7 @@ public class PlayerDefensiveState : PlayerState
         base.Update();
         //　防御している時にできること：　防御をやめる以外に何もできない 
         Debug.Log("プレイヤーが盾をずっと立てている");
-        if (!_player.isDefenceButtonPressed)
+        if (!_player.canDefend)
         {
             _player.stateMachine.ChangeState(_player.idleState);
         }

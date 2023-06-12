@@ -22,7 +22,7 @@ public class PlayerAttackState : PlayerState
         //　攻撃しているときにできること：　攻撃をやめること以外に何もできない　
         // アニメーションが実装されている場合は if (!_player.isAttacking) changeState -> idleState;
         // Animation Events -> Attack Animation End　というアニメーションイベント設置して攻撃を終了する   
-        if (!_player.isAttackButtonPressed)
+        if (!_player.canAttack)
         {
             _player.stateMachine.ChangeState(_player.idleState);
         }

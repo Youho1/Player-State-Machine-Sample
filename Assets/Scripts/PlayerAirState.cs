@@ -22,7 +22,7 @@ public class PlayerAirState : PlayerState
         // 空中にできること　：　空中ダッシュ、二段ジャンプ、空中攻撃など
         // 本当の条件は _player.isGrounded == true 
         //(接地判定が作ってないので、ジャンプキーを離れたら地面にいるとする 
-        if (!_player.isJumpButtonPressed)
+        if (!_player.canJump)
         {
             _player.stateMachine.ChangeState(_player.idleState);
         }
