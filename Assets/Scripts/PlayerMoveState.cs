@@ -22,7 +22,7 @@ public class PlayerMoveState : PlayerState
         Debug.Log("プレイヤーが移動中です");
         // 移動中にできること　：　攻撃＆ジャンプ＆防御＆移動を停止
         //　移動をやめる
-        if (!_player.isMoveButtonPressed)
+        if (!_player.canMove)
         {
             _player.stateMachine.ChangeState(_player.idleState);
         }
